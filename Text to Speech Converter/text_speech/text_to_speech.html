@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="test.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+  <link href="./output.css" rel="stylesheet">
+  <script src="text_to_speech.js" defer></script>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+  <!-- Main navigation container -->
+  <nav class="relative flex w-full flex-wrap items-center justify-between   shadow-dark-mild" data-twe-navbar-ref>
+    <div class="flex w-full flex-wrap items-center justify-between px-3">
+      <div>
+        <a class="mx-2 my-1 flex items-center lg:mb-0 lg:mt-0" href="#">
+          <img class="me-2" src="https://tecdn.b-cdn.net/img/logo/te-transparent-noshadows.webp" style="height: 20px"
+            alt="TE Logo" loading="lazy" />
+        </a>
+      </div>
+
+      <!-- Hamburger button for mobile view -->
+      <button
+        class="block border-0 bg-transparent px-2 text-black/50 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+        type="button" data-twe-collapse-init data-twe-target="#navbarSupportedContent4"
+        aria-controls="navbarSupportedContent4" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- Hamburger icon -->
+        <span class="[&>svg]:w-7 [&>svg]:stroke-black/50 dark:[&>svg]:stroke-neutral-200">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+              clip-rule="evenodd" />
+          </svg>
+        </span>
+      </button>
+
+      <!-- Collapsible navbar container -->
+      <div class="!visible mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"
+        id="navbarSupportedContent4" data-twe-collapse-item>
+        <!-- Left links -->
+        <ul class="list-style-none me-auto flex flex-col ps-0 lg:mt-1 lg:flex-row" data-twe-navbar-nav-ref>
+          <!-- Home link -->
+          <li class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2" data-twe-nav-item-ref>
+            <a class="text-white transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none  dark:hover:text-white/80 font-semibold"
+              aria-current="page" href="#" data-twe-nav-link-ref>Saket's AI</a>
+          </li>
+        </ul>
+
+        <div class="flex items-center pt-3">
+
+          <a href="./speech_to_text.html">
+            <button type="button"
+              class=" transition ease-in-out delay-150 bg-gradient-to-br from-pink-500 to-orange-400  hover:-translate-y-1 hover:scale-110 hover:from-green-400 hover:to-blue-500 duration-300 font-medium rounded-lg hover:text-sm text-sm px-5 py-2.5 text-center me-2 mb-2">Speech
+              to Text</button>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+  <div>
+    <textarea id="text" cols="150" rows="20"
+      placeholder="Type Something ..."></textarea>
+  </div>
+  <div id="centerlbl">
+    <label for="speed" id="speedlbl">Speed</label>
+    <input type="number" style="  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.18); " class="number-input" name="spee" id="speed" min=".5" max="3" step=".5" value="1">
+  </div>
+  <div id="center">
+    <div class="outer button">
+      <button id="play-button">Play</button>
+    </div>
+    <div class="outer button">
+      <button id="pause-button">Pause</button>
+    </div>
+  </div>
+  <div class="outer button">
+    <button id="stop-button">Stop</button>
+    <span></span>
+  </div>
+</body>
+
+</html>
